@@ -7,12 +7,12 @@ import MainHeader from '../components/MainHeader';
 import SmallHeader from '../components/SmallHeader';
 import { ArchiveIcon, ChatAltIcon, ClockIcon, HeartIcon, MailIcon, TicketIcon, UserIcon} from '@heroicons/react/outline';
 import Inbox from '../components/Inbox';
-import Orders from '../components/Orders';
+import OrderedItems from '../components/OrderedItems';
 import SavedItems from '../components/SavedItems';
 import Pending from '../components/Pending';
 import WaveCredit from '../components/WaveCredit';
 
-function Ordered() {
+const Orders = () => {
     const [close, setClose] = useState(true)
     const [modal, setModal] = useState(true)
 
@@ -87,7 +87,7 @@ function Ordered() {
                     {/* </div> */}
                     {/* <div className="flex flex-col "> */}
                     {(id == "inbox") && <Inbox />}
-                    {(id == "orders") && <Orders />}
+                    {(id == "orders") && <OrderedItems />}
                     {(id == "saved") && <SavedItems />}
                     {(id == "pending") && <Pending />}
                     {(id == "credit") && <WaveCredit />}
@@ -97,6 +97,6 @@ function Ordered() {
   );
 };
 
-export default orders;
+export default Orders;
 
 import React from 'react';

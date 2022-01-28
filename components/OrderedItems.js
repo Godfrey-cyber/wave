@@ -1,7 +1,7 @@
 import { TruckIcon } from '@heroicons/react/outline';
 import React from 'react';
 
-const Orders = () => {
+const OrderedItems = () => {
   return (  
     <div className="flex flex-col col-span-9 rounded-sm shadow-gray-300 shadow-sm bg-white">
         <span className="border-b border-gray-200 py-2">
@@ -19,4 +19,4 @@ const Orders = () => {
    )
 };
 
-export default Orders;
+export default OrderedItems;
