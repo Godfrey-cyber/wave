@@ -18,8 +18,6 @@ const MainHeader = ({close, setClose, modal, setModal}) => {
         setModal(prev => !prev)
     }
 
-    //auth
-    
     return (
         <section className="flex items-center justify-between overflow-x-hidden py-2 px-12 bg-white shadow-gray-200 shadow-b shadow-sm">
             <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
@@ -41,8 +39,7 @@ const MainHeader = ({close, setClose, modal, setModal}) => {
                 <div onClick={handleClick} className="mainHeader_divs group">
                         <UserIcon className="mainHeader_icon"/>
                         <p className="mainHeader_p">Account</p>
-                    {close ? (<ChevronDownIcon className="chevron_down" />) : (<ChevronUpIcon className="chevron_down" />
-                    )}
+                        {close ? (<ChevronDownIcon className="chevron_down" />) : (<ChevronUpIcon className="chevron_down" />)}
                 </div>
                 <div onClick={handleModal} className="mainHeader_divs group">
                     <QuestionMarkCircleIcon  className="mainHeader_icon"/>
