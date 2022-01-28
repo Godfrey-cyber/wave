@@ -12,8 +12,10 @@ import {StarIcon} from '@heroicons/react/solid'
 import AlsoLike from '../components/RecentlyLiked';
 import Categories from '../components/Categories';
 import { useState } from "react"
-import AccountModal from '../../components/AccountModal';
-import HelpModal from '../../components/HelpModal';
+import AccountModal from '../components/AccountModal';
+import HelpModal from '../components/HelpModal';
+// import AccountModal from '../../components/AccountModal';
+// import HelpModal from '../../components/HelpModal';
 
 const OfficialStore = ({ products }) => {
     const [close, setClose] = useState(true)
