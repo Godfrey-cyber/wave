@@ -12,7 +12,7 @@ import SavedItems from '../components/SavedItems';
 import Pending from '../components/Pending';
 import WaveCredit from '../components/WaveCredit';
 
-function Order() {
+function orders() {
     const [close, setClose] = useState(true)
     const [modal, setModal] = useState(true)
 
