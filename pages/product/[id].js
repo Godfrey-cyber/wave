@@ -169,7 +169,7 @@ const dispatch = useDispatch()
                             </div>
                             <div className="flex flex-col border border-gray-200 rounded-sm m-4">
                                 <span className="border-b rounded-sm border-gray-300">
-                                    <h3 className="text-sm p-2 text-gray-700">WHAT'S IN THE BOX</h3>
+                                    <h3 className="text-sm p-2 text-gray-700">WHAT&apos;S IN THE BOX</h3>
                                 </span>
                                 <span className="flex flex-col p-2 ">
                                     <p className="text-sm text-gray-700">{title}</p>

@@ -1,4 +1,3 @@
-import React from 'react';
 import  Head  from "next/head"
 import { useState } from "react"
 import { useRouter } from "next/router"
@@ -13,7 +12,7 @@ import SavedItems from '../components/SavedItems';
 import Pending from '../components/Pending';
 import WaveCredit from '../components/WaveCredit';
 
-const orders = () => {
+function orders() {
     const [close, setClose] = useState(true)
     const [modal, setModal] = useState(true)
 
@@ -99,3 +98,5 @@ const orders = () => {
 };
 
 export default orders;
+
+import React from 'react';
