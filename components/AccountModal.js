@@ -70,7 +70,7 @@ const AccountModal = () => {
                         <span className="flex items-center border-t hover:bg-gray-100 hover:cursor-pointer border-gray-200 justify-center py-1 px-5"
                             onClick={renderProps.onClick}
                             disabled={renderProps.disabled}>
-                            <p className="text-orange-400 text-sm py-1">LOGOUT</p>
+                            <p className="text-orange-400 text-sm py-1">{user ? "LOGOUT" : "SIGN IN"}</p>
                         </span>
                     )}
                 onSuccess={googleSuccess}
