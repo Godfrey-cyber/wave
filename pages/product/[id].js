@@ -55,11 +55,11 @@ const dispatch = useDispatch()
             <MainHeader setClose={setClose} modal={modal} setModal={setModal} close={close}/>
             {!close && <AccountModal />}
             {!modal && <HelpModal />}
-                <main className="grid grid-cols-12 space-x-1 mx-auto my-10 px-16 w-full">
+                <main className="grid grid-cols-12 space-x-1 lg:mx-auto my-10 lg:px-16 w-full">
                     {/* Product segment */}
-                <div className="flex flex-col col-span-9">
-                    <div className="grid grid-cols-12 items-start rounded-sm mx-5 shadow-sm bg-white p-4 space-x-5">
-                        <div className="grid gap-y-12 content-between col-span-4 ">
+                <div className="flex flex-col mb-0 md:mb-4 col-span-12 lg:col-span-9">
+                    <div className="grid grid-cols-12 items-start rounded-sm lg:mx-5 shadow-sm bg-white p-2 lg:p-4 space-x-5">
+                        <div className="grid gap-y-12 flex-col content-between col-span-12 lg:col-span-4 ">
                             <img src={image} objectfit="contain" loading="lazy" className="hover:cursor-grabbing h-36 w-auto" />
                             <div className="text-sm border-t p-2 border-gray-200">
                                 <p className="text-sm text-gray-500">SHARE THIS PRODUCT</p>
@@ -73,12 +73,12 @@ const dispatch = useDispatch()
                             </div>
                         </div>
                         {/* div-2 */}
-                        <div className="flex flex-col col-span-8">
+                        <div className="flex flex-col col-span-12 lg:col-span-8">
                             <span onClick={addItemToWishlist} className="flex justify-between items-center">
-                                <p className="text-md">{title}</p>
-                                <HeartIcon className="h-9 text-orange-400 hover:bg-pink-200 p-2 rounded-full transition-all duration-100"/>
+                                <p className="text-md">{title.split("").splice(0, 20).join("")}...</p>
+                                <HeartIcon className="h-9 text-orange-400 hover:bg-pink-200 lg:p-2 rounded-full transition-all duration-100"/>
                             </span>
-                            <span className="flex space-x-2 my-2">
+                            <span className="lg:flex flex-col space-x-2 my-2">
                                 <p className="text-xs text-gray-700">Category: {category} |</p>
                                 <p className="text-xs text-blue-700 hover:underline hover:cursor-pointer">Similar products from {category}</p>
                             </span>
@@ -99,7 +99,7 @@ const dispatch = useDispatch()
                                         currency="KES"
                                     />
                                 </div>
-                                <p className="text-xs text-gray-700">+ shipping from KSh 97 to CBD - UON/Globe/Koja/River Road</p>
+                                <p className="lg:text-xs  text-sm text-gray-700">+ shipping from KSh 97 to CBD - UON/Globe/Koja/River Road</p>
                                 <button onClick={addItemToBasket} className="flex items-center p-2  justify-between bg-orange-500 rounded-sm text-xs text-white shadow-sm shadow-gray-600">
                                     <ShoppingCartIcon className="h-6 text-white" />
                                     <p className="text-sm text-white">ADD TO CART</p>
@@ -107,24 +107,24 @@ const dispatch = useDispatch()
                                 </button> 
                             </span>
                             <div className="flex flex-col space-y-2 border-t border-gray-200">
-                                <h4 className="text-sm p-2 text-gray-700">PROMOTIONS</h4>
+                                <h4 className="text-sm lg:p-2 text-gray-700">PROMOTIONS</h4>
                                 <span className="text-sm flex space-x-3">
-                                    <SparklesIcon className="h-5 text-orange-400 "/>
+                                    <div><SparklesIcon className="h-5 text-orange-400 "/></div>
                                     <p className="text-blue-600 hover:underline hover:cursor-pointer text-xs">Free delivery in Nairobi on orders above Kshs 1000 (excluding large items)</p>
                                 </span>
                                 <span className="text-sm flex space-x-3">
-                                    <ShieldCheckIcon className="h-5 text-orange-400 "/>
+                                    <div><ShieldCheckIcon className="h-5 text-orange-400 "/></div>
                                     <p className="text-blue-600 hover:underline hover:cursor-pointer text-xs">Easier and safer payments via WavePay app</p>
                                 </span>
                                 <span className="text-sm flex space-x-3">
-                                    <BadgeCheckIcon className="h-5 text-orange-400 "/>
-                                    <p className="text-blue-600 hover:underline hover:cursor-pointer text-xs">Get 20% off with code KARIBU capped at Ksh 300 for your first order</p>
+                                    <div><BadgeCheckIcon className="h-5 text-orange-400 "/></div>
+                                    <p className="text-blue-600 hover:underline hover:cursor-pointer text-xs">Get 20% off with code WELCOME capped at Ksh 300 for your first order</p>
                                 </span>
                             </div>
                         </div>
                     </div>
                     {/* product details */}
-                    <div className="flex flex-col rounded-sm shadow-sm bg-white mt-4 mx-5">
+                    <div className="flex flex-col rounded-sm shadow-sm bg-white mt-4 lg:mx-5">
                         <span className="flex items-center justify-between border-b border-gray-300">
                             <h2 className="text-sm text-gray-700 font-normal p-2">PRODUCT DETAILS</h2>
                             <ChevronRightIcon className="h-6 text-gray-700"/>
@@ -136,11 +136,11 @@ const dispatch = useDispatch()
                     </div>
                 
                     {/* specifications */}
-                    <div className="flex flex-col rounded-sm shadow-sm bg-white mt-4 mx-5">
+                    <div className="flex flex-col rounded-sm shadow-sm bg-white mt-4 lg:mx-5">
                         <span className="flex items-center justify-between border-b border-gray-200">
                             <h2 className="text-sm text-gray-700 font-normal p-2">SPECIFICATIONS</h2>
                         </span>
-                        <div className="grid grid-cols-2">
+                        <div className="grid grid-cols-1 lg:grid-cols-2">
                             <div className="flex flex-col border border-gray-200 rounded-sm m-4">
                                 <span className="border-b rounded-sm border-gray-200">
                                     <h3 className="text-sm p-2 text-gray-700"> KEY FEATURES</h3>
@@ -200,7 +200,7 @@ const dispatch = useDispatch()
                     <RecentlyLiked products={products} />
                     {/* you may also like */}
                     <AlsoLike products={products}/>
-                    <div className="flex flex-col rounded-sm shadow-sm bg-white mt-4 mx-5">
+                    <div className="flex flex-col rounded-sm shadow-sm bg-white mt-4 mb-4 lg:mb-1  lg:mx-5">
                         <span className="flex items-center justify-between border-b border-gray-200">
                             <h2 className="text-sm text-gray-900 p-2">Customer Feedback</h2>
                         </span>
@@ -212,19 +212,19 @@ const dispatch = useDispatch()
                 </div>
                 {/* </div> */}
                 {/* return & deliverlies div */}
-                <div className="flex flex-col col-span-3">
-                    <div className="flex flex-col rounded-sm shadow-sm bg-white">
+                <div className="flex flex-col col-span-12 lg:col-span-3">
+                    <div className="flex flex-col rounded-sm shadow-sm lg:mx-5 bg-white">
                         <span className="divide-y divide-slate-200">
                             <h2 className="text-sm text-gray-600 font-normal p-2">DELIVERY & RETURNS</h2>
                             <h2 className="text-md text-gray-600 font-normal p-2">Choose your location</h2> 
                         </span>
                         <form className="grid p-2" action="">
-                            <select type="text" className="flex-1 my-1 h-8 border border-gray-400 rounded-sm bg-white text-gray-500 focus:border-orange-400 focus:outline-none font-normal">
+                            <select type="text" className="flex-1 my-1 h-10 lg:h-8 border border-gray-400 rounded-sm bg-white text-gray-500 focus:border-orange-400 focus:outline-none font-normal">
                                 <option className="text-gray-500 font-normal" value="Nairobi">Nairobi</option>
                                 <option value="Nairobi">Kiambu</option>
                                 <option value="Nairobi">Nyeri</option>
                             </select>
-                            <select type="text" className="flex-1 my-1 h-8 border border-gray-400 rounded-sm bg-white text-gray-500 focus:border-orange-400 focus:outline-none font-normal">
+                            <select type="text" className="flex-1 my-1 h-10 lg:h-8 border border-gray-400 rounded-sm bg-white text-gray-500 focus:border-orange-400 focus:outline-none font-normal">
                                 <option className="bg-gray-200 hover:text-orange-400 font-normal" value="Nairobi">Embakasi</option>
                                 <option value="Nairobi">Thika</option>
                                 <option value="Nairobi">Tetu</option>
@@ -232,32 +232,32 @@ const dispatch = useDispatch()
                         </form>
                         <div className="flex flex-col p-2 space-y-2">
                             <div className="flex flex-row space-x-3">
-                                <TruckIcon className="h-16 text-gray-500" />
+                                <div><TruckIcon className="h-8 text-gray-500" /></div>
                                 <span className="flex flex-col">
-                                    <h3 className="text-sm">Door Delivery</h3>
-                                    <p className="text-xs">Shipping Ksh 128</p>
-                                    <p className="text-xs">Ready for delivery between 20 January & 21 January when you order within next 22hrs 2mins</p>
+                                    <h3 className="lg:text-sm text-md">Door Delivery</h3>
+                                    <p className="lg:text-xs text-sm">Shipping Ksh 128</p>
+                                    <p className="lg:text-xs text-sm">Ready for delivery between 20 January & 21 January when you order within next 22hrs 2mins</p>
                                 </span>
                             </div>
                             <div className="flex flex-row space-x-3">
-                                <QuestionMarkCircleIcon className="h-16 text-gray-500" />
+                                <div><QuestionMarkCircleIcon className="h-8 text-gray-500" /></div>
                                 <span className="flex flex-col">
-                                    <h3 className="text-sm">Pickup Station</h3>
-                                    <p className="text-xs">Shipping KSh 97</p>
-                                    <p className="text-xs">Ready for pickup between 20 January & 21 January when you order within next 22hrs 2mins</p>
+                                    <h3 className="lg:text-sm text-md">Pickup Station</h3>
+                                    <p className="lg:text-xs text-sm">Shipping KSh 97</p>
+                                    <p className="lg:text-xs text-sm">Ready for pickup between 20 January & 21 January when you order within next 22hrs 2mins</p>
                                 </span>
                             </div>
                             <div className="flex flex-row space-x-3">
-                                <RefreshIcon className="h-8 text-gray-500" />
+                                <div><RefreshIcon className="h-8 text-gray-500" /></div>
                                 <span className="flex flex-col">
-                                    <h3 className="text-sm">Return Policy</h3>
-                                    <p className="text-xs">Easy Return, Quick Refund. <span className="text-blue-600 hover:underline hover:cursor-pointer">See more</span> </p>
+                                    <h3 className="lg:text-sm text-md">Return Policy</h3>
+                                    <p className="lg:text-xs text-sm">Easy Return, Quick Refund. <span className="text-blue-600 hover:underline hover:cursor-pointer">See more</span> </p>
                                 </span>
                             </div>
                         </div>
                     </div>
                     {/* seller information */}
-                    <div className="flex flex-col mt-4 rounded-sm shadow-sm bg-white">
+                    <div className="flex flex-col mt-4 rounded-sm shadow-sm lg:mx-5 bg-white">
                         <span className="flex items-center justify-between border-b border-gray-300">
                             <h2 className="text-sm text-gray-700 font-normal p-2">SELLER INFORMATION</h2>
                             <ChevronRightIcon className="h-6 text-gray-700"/>
@@ -292,7 +292,7 @@ const dispatch = useDispatch()
                         </div>
                     </div>
                     {/* product details */}
-                    <div className="flex justify-start flex-col mt-4 rounded-sm shadow-sm bg-white">
+                    <div className="flex justify-start flex-col mt-4 rounded-sm lg:mx-5 shadow-sm bg-white">
                         <span className="flex space-x-4 p-1 items-center hover:bg-gray-100 text-sm text-gray-800">
                             <DocumentTextIcon className="h-6 text-gray-600"/>
                             <p className="text-xs text-gray-600 p-2">Product Details</p>
@@ -307,7 +307,7 @@ const dispatch = useDispatch()
                         </span>
                     </div>
                     {/* product */}
-                    <div className="flex flex-col align-items-center justify-between  mt-4 p-2 rounded-sm shadow-sm bg-white">
+                    <div className="flex flex-col align-items-center justify-between lg:mx-5 mt-4 p-2 rounded-sm shadow-sm bg-white">
                         <div className="mb-1 flex space-y-3">
                             <Image src={image} height={80} width={100} objectfit="contain"/>
                             <span className="flex flex-col p-2">
@@ -327,7 +327,7 @@ const dispatch = useDispatch()
                         </button>  
                     </div>
                     {/* chat */}
-                    <div className="flex flex-col align-items-center justify-between mt-4 p-2 rounded-sm shadow-sm bg-white">
+                    <div className="flex flex-col align-items-center justify-between mt-4 p-2 lg:mx-5 rounded-sm shadow-sm bg-white">
                         <div className="mb-1 flex flex-col items-center justify-center space-y-3 p-2">
                             <p className="text-sm text-gray-600 line-clamp-1">Questions about this product?</p>
                             <span className="flex space-x-3 items-center text-sm hover:bg-pink-100 hover:rounded-sm hover:cursor-pointer p-1">
@@ -339,7 +339,7 @@ const dispatch = useDispatch()
                 </div>
                 {/* returns & deliveries */}
                 
-                <div className="flex flex-col col-span-12 mt-4 mx-2">
+                <div className="flex flex-col col-span-12 mt-4 lg:mx-2">
                     <MoreItems products={products} />
                     <Sponsered products={products} />
                     <RecentReviews products={products} />

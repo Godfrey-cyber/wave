@@ -4,16 +4,16 @@ import Product from './Product'
 
 const ProductFeed = ({products}) => {
     return (
-        <div className="mx-auto rounded-md px-20 my-4">
-            <div className="flex justify-between bg-orange-600 py-3 px-4 rounded-t-md">
+        <div className="mx-auto lg:rounded-md lg:px-20 my-4">
+            <div className="flex justify-between bg-orange-600 py-3 px-4 lg:rounded-t-md">
                 <p className="text-white">Top Trends</p>
                 <span className="flex space-x-2">
                     <p className="text-white hover:cursor-pointer">SEE ALL</p>
                     <ChevronRightIcon className="text-white h-6"/>
                 </span>
             </div>
-            <div className=" bg-white grid rounded-b-md grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  mx-auto transition-all duration-100">
-                {products.slice(8, 12).map(({ image, category, description, price, title, id }) => (
+            <div className="product-feed">
+                {products.slice(8, 14).map(({ image, category, description, price, title, id }) => (
                 <Product 
                     id={id}
                     key={id}

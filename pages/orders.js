@@ -37,9 +37,9 @@ const Orders = () => {
             <MainHeader setClose={setClose} modal={modal} setModal={setModal} close={close}/>
             {!close && <AccountModal />}
             {!modal && <HelpModal />}
-            <main className="grid grid-cols-12 space-x-3 max-w-6xl mx-auto my-5 px-8">
+            <main className="grid grid-cols-12 space-x-3 max-w-6xl mx-auto my-5 px-4 md:px-8">
                 {/* <div className="flex flex-col "> */}
-                    <div className="flex flex-col col-span-3 rounded-sm shadow-gray-300 shadow-sm bg-white">
+                    <div className="flex flex-col lg:col-span-3 col-span-12 mb-4 rounded-sm shadow-gray-300 shadow-sm bg-white">
                         <span onClick={(event) => setId(event.target.id)} className="account_util" id="account">
                             <UserIcon className="h-5 text-gray-700 pointer-events-none"/>
                             <p className="account_util1 pointer-events-none">My Wave Account</p>

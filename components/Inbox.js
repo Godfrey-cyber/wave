@@ -1,9 +1,11 @@
 import { MailIcon } from '@heroicons/react/outline';
 import React from 'react';
+import { useRouter }   from "next/router"
 
 const Inbox = () => {
+    const router = useRouter()
   return (  
-    <div className="flex flex-col col-span-9 rounded-sm shadow-gray-300 shadow-sm bg-white">
+    <div className="flex flex-col col-span-12 lg:col-span-9 rounded-sm shadow-gray-300 shadow-sm bg-white">
         <span className="border-b border-gray-200 py-2">
             <p className="text-gray-700 px-3">INBOX</p>
         </span>

@@ -3,7 +3,7 @@ import {ShieldCheckIcon, ShoppingBagIcon, SparklesIcon, TruckIcon} from "@heroic
 
 const SmallHeader = () => {
     return (
-        <div className="w-full py-2 h-8 bg-jumia-bg_sm_header justify-around flex items-center">
+        <div className="hidden w-full py-2 h-8 bg-jumia-bg_sm_header justify-around items-center">
             <div className="flex items-center space-x-1">
                 <SparklesIcon className="icon"/>
                 <p className="text-xs text-orange-300 whitespace-nowrap hover:underline">Sell on Wave</p>

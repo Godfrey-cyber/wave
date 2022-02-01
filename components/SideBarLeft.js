@@ -5,7 +5,7 @@ import { DesktopComputerIcon, DeviceMobileIcon, HomeIcon } from '@heroicons/reac
 
 const SideBarLeft = () => {
     return (
-        <div className="sm:hidden md:inline-flex col-span-2">
+        <div className="hidden lg:inline-flex col-span-2">
             <div className="p-2 mt-5 max-w-[200px] xl:min-w-[200px] bg-gray-100 rounded-md">
                 <SideBarRow Icon={UsersIcon} title="Supermarket"/>
                 <SideBarRow Icon={UserGroupIcon} title="Health & Beauty"/>

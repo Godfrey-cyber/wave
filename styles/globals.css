@@ -31,4 +31,7 @@
   .chevron_down {
     @apply h-4 group-hover:text-orange-400 hover:cursor-pointer font-medium text-gray-800
   }
+  .product-feed {
+    @apply bg-white lg:rounded-md grid grid-flow-row-dense md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 mx-auto transition-all duration-100 scrollbar-hide
+  }
 }

@@ -4,9 +4,10 @@ import { useRouter } from "next/router"
 import {GoogleLogin } from 'react-google-login'
 import {signIn } from "../slices/authSlice"
 import {logOut } from "../slices/authSlice"
+import { useDispatch } from "react-redux"
 
 const AccountModal = () => {
-   
+   const dispatch = useDispatch()
     const router = useRouter()
     const [user, setUser] = useState(null);
     
@@ -17,7 +18,7 @@ const AccountModal = () => {
         const value = localStorage.getItem("profile");
         const user = !!value ? JSON.parse(value) : undefined;
         setUser(JSON.parse(localStorage.getItem("profile")))
-
+            console.log(user)
         // setUser(JSON.parse(localStorage.getItem("profile")))
     },[])
     console.log(user)
@@ -70,8 +71,8 @@ const AccountModal = () => {
                         <span className="flex items-center border-t hover:bg-gray-100 hover:cursor-pointer border-gray-200 justify-center py-1 px-5"
                             onClick={renderProps.onClick}
                             disabled={renderProps.disabled}>
-                            <p className="text-orange-400 text-sm py-1">{user ? "LOGOUT" : "SIGN IN"}</p>
-                        </span>
+                            <p className="text-orange-400 text-sm py-1">{user ? "LOGOUT" : 'SIGN IN'}</p>
+                        </span> 
                     )}
                 onSuccess={googleSuccess}
                 onFailure={googleFailure}
@@ -82,3 +83,7 @@ const AccountModal = () => {
 };
 
 export default AccountModal;
+// {
+//     "error": "idpiframe_initialization_failed",
+//     "details": "Not a valid origin for the client: http://localhost:3000 has not been registered for client ID 943228039096-85874clgtl50rgj4bn4ook2tom7b4ni1.apps.googleusercontent.com. Please go to https://console.developers.google.com/ and register this origin for your project's client ID."
+// }

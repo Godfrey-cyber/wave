@@ -21,7 +21,7 @@ const Product = ({ image, category, description, price, title, id }) => {
         <div onClick={() => router.push(`/product/${id}`)} key={id} className="flex flex-col m-2 bg-white z-30 p-2 hover:cursor-pointer rounded-md hover:bg-gray-100">
             <p className="text-center text-xs mb-1 italic text-gray-400">{category}</p>
             <Image src={image} objectFit='contain' height={80} width={80} />
-            <h4 className="my-1 text-sm line-clamp-1">{title}</h4>
+            <h4 className="my-1 text-xs md:text-sm line-clamp-1">{title}</h4>
             <div className="flex">
                 {/* {Array(rating).fill().map((_, i) => (
                     <StarIcon key={id} className="h-5 text-yellow-500"/>

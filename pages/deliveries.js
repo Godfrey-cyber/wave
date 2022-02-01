@@ -28,10 +28,10 @@ const Deliveries = ({products}) => {
       {!modal && <HelpModal />}
             <main className="max-w-5xl mx-auto ">
                 <div className="flex flex-col space-y-4 my-10">
-                    <div className="flex bg-white items-center h-80 justify-between rounded-md">
+                    <div className="flex bg-white items-center h-80 justify-between rounded-md mx-4">
                         <img className="rounded w-full h-full hover:scale-102 translation-all duration-100" src="https://ke.jumia.is/cms/2022/W02/HP/Sliders/KE_Electronics_SuperSaver_Afcon_0122_S.jpg" alt="myimage" />
                     </div>
-                    <div className="grid grid-flow-row-dense gap-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 bg-white rounded-md py-5">
+                    <div className="grid grid-flow-row-dense gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 bg-white rounded-md py-5 mx-4">
                         {products.slice(0, 12).map(({ image, category, description, price, title, id }) => (
                             <Displays 
                                 id={id}
@@ -42,15 +42,15 @@ const Deliveries = ({products}) => {
                             ))}
                     </div>
                     <div className="grid grid-cols-12 space-x-3">
-                        <div className="col-span-3">
+                        <div className="col-span-12 lg:col-span-3">
                             <Categories />
                         </div>
-                        <div className="col-span-9 bg-white rounded-sm mt-6">
+                        <div className="col-span-12 lg:col-span-9 bg-white rounded-sm mt-6 mx-4">
                             <span className="flex items-center justify-between border-b border-gray-200">
                                 <p className="text-gray-80 text-md font-light p-2">FREE DELIVERY</p>
                                 <p className="text-gray-80 text-md font-light hover:text-orange-400 p-3">Sort by :Popularity</p>
                             </span>
-                            <div className="grid grid-flow-row-dense gap-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 bg-white rounded-md py-5">
+                            <div className="grid grid-flow-row-dense gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 bg-white rounded-md py-5">
                                 {products.slice(0, 20).map(({ image, category, description, price, title, id }) => (
                                 <FreeDelivery 
                                     id={id}

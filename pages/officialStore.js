@@ -32,7 +32,7 @@ const OfficialStore = ({ products }) => {
             <MainHeader setClose={setClose} modal={modal} setModal={setModal} close={close}/>
             {!close && <AccountModal />}
             {!modal && <HelpModal />}
-            <main className="grid grid-cols-12 w-full mx-auto my-10 px-16">
+            <main className="grid grid-cols-12 w-full mx-auto my-10 lg:px-16">
                 <div className="max-w-5xl mt-10 col-span-12 mx-auto">
                     <div className="h-80">
                         <img className="rounded-sm w-full h-full" objectfit="contain" src="https://ke.jumia.is/cms/2022/W02/HP/Sliders/KE_Electronics_SuperSaver_Afcon_0122_S.jpg" alt="helloimage"/>
@@ -49,7 +49,7 @@ const OfficialStore = ({ products }) => {
                         </div>
                    </div>
                    <Electronics products={products} />
-                   <main className="grid grid-cols-12 space-x-1 mx-auto my-4 w-full">
+                   <main className="grid lg:grid-cols-12 space-x-1 mx-auto my-4 w-full">
                     {/* category */}
                     <Categories />
                     {/* returns & deliveries */}

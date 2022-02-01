@@ -4,7 +4,7 @@ import {StarIcon} from '@heroicons/react/solid'
 
 const Categories = () => {
     return (
-        <div className="flex flex-col col-span-3">
+        <div className="flex flex-col lg:col-span-3 col-span-12 mx-4">
                             <div className="flex flex-col rounded-sm shadow-sm bg-white py-1 mt-6">
                                 <span className="border-b border-gray-200 py-2">
                                     <p className="text-gray-700 px-3">CATEGORY</p>

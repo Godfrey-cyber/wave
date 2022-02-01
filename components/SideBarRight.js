@@ -3,7 +3,7 @@ import React from 'react'
 
 const SideBarRight = () => {
     return (
-       <div className="sm:hidden md:inline-flex flex-col col-span-2">
+       <div className="hidden lg:inline-flex flex-col col-span-2">
             <div className="px-2 py-3 mt-5 bg-gray-100 rounded-md space-y-2">
                 <div className="flex space-x-1 hover:cursor-pointer">
                     <span className="">

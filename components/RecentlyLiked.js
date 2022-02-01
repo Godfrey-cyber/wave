@@ -7,7 +7,7 @@ const AlsoLike = ({products}) => {
             <span className="flex bg-white rounded-t-md p-2">
                 <p className="text-gray-800">Customers who viewed this product also viewed</p>
             </span>
-            <div className=" bg-white mt-2 mx-4  grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 transition-all duration-100">
+            <div className="product-feed">
                 {products.slice(4, 8).map(({ image, category, description, price, title, id }) => (
                     <Product 
                         id={id}
