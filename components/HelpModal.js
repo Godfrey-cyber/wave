@@ -3,7 +3,7 @@ import React from 'react';
 
 const HelpModal = () => {
     return (
-        <div className="flex flex-col bg-white shadow-gray-300 shadow-md rounded-sm absolute top-36 right-20 z-50">
+        <div className="flex flex-col bg-white shadow-gray-300 shadow-md rounded-sm absolute top-18 right-20 z-50">
             <span className="account_util">
                 <p className="account_util1">Help Center</p>
             </span>
