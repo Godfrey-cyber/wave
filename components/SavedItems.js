@@ -14,13 +14,13 @@ const SavedItems = () => {
             <p className="text-gray-700 px-3">SAVED ITEMS</p>
         </span>
           {!items.length ? 
-            <div className="flex flex-col justify-center items-center m-auto">
+            <div className="flex flex-col justify-center items-center py-6 m-auto">
             <span className="flex p-6 bg-orange-200 rounded-full items-center">
                 <HeartIcon className="h-8 text-gray-600 font-thin"/>
             </span>
             <p className="text-gray-800 text-sm my-3">You have no saved items yet</p>
             <p className="text-gray-800 text-xs my-2">Your saved items will appear here</p>
-            <button onClick={() => router.push("/")} className="button">START SHOPPING</button>
+            <button onClick={() => router.push("/")} className="button mb-4">START SHOPPING</button>
           </div> : 
                   items.map((item, i) => (
                     < WishlistProduct

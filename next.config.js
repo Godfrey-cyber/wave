@@ -11,6 +11,9 @@ module.exports = {
   },
   jpg: {
     domains: ["jumia.co.ke"]
+  },
+  png: {
+    domains: [ "freelogodesign.org"]
   }
 }
 

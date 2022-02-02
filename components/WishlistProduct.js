@@ -4,7 +4,7 @@ import Currency from 'react-currency-formatter'
 import { useDispatch } from 'react-redux'
 import { addToWishlist, removeFromWishlist } from '../slices/wishlistSlice'
 import {addToBasket} from "../slices/basketSlice"
-import { HeartIcon, TrashIcon } from '@heroicons/react/outline';
+import { HeartIcon, MinusCircleIcon, PlusCircleIcon, TrashIcon } from '@heroicons/react/outline';
 import {useRouter} from "next/router"
 
 const WishlistProduct = ({ id, title, price, image }) => {
@@ -35,13 +35,16 @@ const WishlistProduct = ({ id, title, price, image }) => {
                         <h3 onClick={() => router.push(`/product/${id}`)} className="text-gray-900 text-md hover:text-orange-400 line-clamp-1 hover:cursor-pointer">{title.split("").splice(0, 30).join("")}...</h3>
                         <div className="flex space-x-4">
                             <span onClick={removeItemFromWishlist} className="flex space-x-2 mt-2 items-center text-sm text-orange-400">
-                                <TrashIcon className="h-5 text-orange-400"/>
-                                <p className="text-sm text-orange-400 hover:cursor-pointer">REMOVE FROM WISHLIST</p>
+                                <div><TrashIcon className="h-5 text-orange-400"/></div>
+                                <p className="hidden lg:inline-flex text-sm text-orange-400 hover:cursor-pointer">REMOVE FROM WISHLIST</p>
                             </span>
                         </div>
                     </div>
                     <div className="flex flex-col space-y-2 my-auto justify-self-end">
-                        <button onClick={addItemToBasket} className="button">Add to Cart</button>
+                      <button onClick={addItemToBasket} className="hidden lg:button">Add to Cart</button>
+                      <div onClick={addItemToBasket} className="flex">
+                          <PlusCircleIcon className="h-5 lg:hidden text-orange-400" />
+                      </div>
                     </div>
                     <span className="font-bold">
                         <Currency quantity={price} currency="KES"/>

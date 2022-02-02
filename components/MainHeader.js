@@ -4,7 +4,6 @@ import Image from "next/image"
 import { selectItems } from "../slices/basketSlice"
 import { useSelector } from "react-redux"
 import { useDispatch } from "react-redux"
-
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
@@ -33,11 +32,12 @@ useEffect(() => {
     return (
         <section className="flex flex-col sticky w-full top-0 z-50 overflow-x-hidden py-2 lg:px-12 px-8 space-y-2 bg-white shadow-gray-200 shadow-b shadow-sm">
             <div className="flex items-center justify-between ">
-                <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
-                    <span onClick={() => router.push("/")}>
-                        <h3 className="text-xl text-gray-700 font-bold">WAVE</h3>
+                {/* <div className="mt-2 flex items-center flex-grow sm:flex-grow-0"> */}
+                    <span onClick={() => router.push("/")} className="mt-2 flex items-center space-x-1 hover:cursor-pointer">
+                        <p className="text-gray-800 text-2xl">Wave</p>
+                        <div><ShoppingCartIcon className="h-6 text-gray-800" /></div>
                     </span>
-                </div>
+                {/* </div> */}
                     {/* search */}
                 <div className="hidden lg:flex items-center h-10 rounded-md flex-grow cursor-pointer bg-orange-400 hover:bg-orange-500">
                     <input className="p-2 w-6 flex-grow h-full flex-shrink rounded-l-md focus:outline-none px-4" placeholder="Search products, brands & categories" type="text" />

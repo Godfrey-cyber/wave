@@ -44,7 +44,7 @@ const AccountModal = () => {
         setUser(null)
     }
   return (
-        <div className="flex flex-col bg-white shadow-gray-300 shadow-md rounded-sm absolute top-36 right-48 z-50">
+        <div className="flex flex-col bg-white shadow-gray-300 shadow-md rounded-sm absolute top-18 right-12 lg:right-48 z-50">
             <span onClick={() => router.push("/orders")} className="account_util">
                 <UserIcon className="h-5 text-gray-700 pointer-events-none"/>
                 <p className="account_util1 pointer-events-none">My Account</p>
@@ -71,7 +71,8 @@ const AccountModal = () => {
                         <span className="flex items-center border-t hover:bg-gray-100 hover:cursor-pointer border-gray-200 justify-center py-1 px-5"
                             onClick={renderProps.onClick}
                             disabled={renderProps.disabled}>
-                            <p className="text-orange-400 text-sm py-1">{user ? "LOGOUT" : 'SIGN IN'}</p>
+                            
+                            {!user ? (<p onClick={logout} className="text-orange-400 text-sm py-1">LOGOUT</p>) : (<p className="text-orange-400 text-sm py-1">SIGNIN</p>)}
                         </span> 
                     )}
                 onSuccess={googleSuccess}

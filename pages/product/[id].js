@@ -55,11 +55,11 @@ const dispatch = useDispatch()
             <MainHeader setClose={setClose} modal={modal} setModal={setModal} close={close}/>
             {!close && <AccountModal />}
             {!modal && <HelpModal />}
-                <main className="grid grid-cols-12 space-x-1 lg:mx-auto my-10 lg:px-16 w-full">
+                <main className="grid grid-cols-12 lg:space-x-1 lg:mx-auto my-10 lg:px-16 w-full">
                     {/* Product segment */}
                 <div className="flex flex-col mb-0 md:mb-4 col-span-12 lg:col-span-9">
                     <div className="grid grid-cols-12 items-start rounded-sm lg:mx-5 shadow-sm bg-white p-2 lg:p-4 space-x-5">
-                        <div className="grid gap-y-12 flex-col content-between col-span-12 lg:col-span-4 ">
+                        <div className="grid gap-y-14 flex-col content-between col-span-12 lg:col-span-4 ">
                             <img src={image} objectfit="contain" loading="lazy" className="hover:cursor-grabbing h-36 w-auto" />
                             <div className="text-sm border-t p-2 border-gray-200">
                                 <p className="text-sm text-gray-500">SHARE THIS PRODUCT</p>
@@ -73,12 +73,12 @@ const dispatch = useDispatch()
                             </div>
                         </div>
                         {/* div-2 */}
-                        <div className="flex flex-col col-span-12 lg:col-span-8">
+                        <div className="flex flex-col col-span-12 lg:col-span-8 lg:px-5">
                             <span onClick={addItemToWishlist} className="flex justify-between items-center">
                                 <p className="text-md">{title.split("").splice(0, 20).join("")}...</p>
                                 <HeartIcon className="h-9 text-orange-400 hover:bg-pink-200 lg:p-2 rounded-full transition-all duration-100"/>
                             </span>
-                            <span className="lg:flex flex-col space-x-2 my-2">
+                            <span className="flex flex-col space-x-2">
                                 <p className="text-xs text-gray-700">Category: {category} |</p>
                                 <p className="text-xs text-blue-700 hover:underline hover:cursor-pointer">Similar products from {category}</p>
                             </span>

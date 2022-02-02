@@ -28,7 +28,7 @@ const SideBarRight = () => {
                         <CurrencyDollarIcon className="h-8 text-orange-300"/>
                     </span>
                     <div className="flex-col">
-                        <p className="text-sm font-normal">SELL ON JUMIA</p>
+                        <p className="text-sm font-normal">SELL ON WAVE</p>
                         <p className="text-xs font-normal">Millions Of Visitors</p>
                     </div>
                 </div>
