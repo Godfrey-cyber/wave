@@ -56,7 +56,7 @@ useEffect(() => {
                         { modal ? (<ChevronDownIcon className="chevron_down"/>) : (<ChevronUpIcon className="chevron_down"/>)}
                     </div>
                     <div onClick={() => router.push("/cart")} className="relative mainHeader_divs group">
-                        <span className="absolute -top-2 -right-2 md:right-2 h-5 w-5 bg-yellow-400 text-center align-center rounded-full text-white text-sm font-bold">{items.length}</span>
+                        <span className="absolute -top-2 -right-2 md:right-2 lg:right-6 h-5 w-5 bg-yellow-400 text-center align-center rounded-full text-white text-sm font-bold">{items.length}</span>
                         <ShoppingCartIcon className="mainHeader_icon" />
                         <p className="mainHeader_p hidden lg:inline-flex">Cart</p>
                     </div>

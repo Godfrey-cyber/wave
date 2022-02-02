@@ -3,7 +3,7 @@ import Product from './Product';
 
 const MoreItems = ({products}) => {
     return (
-        <div className="flex flex-col col-span-12 rounded-sm shadow-sm bg-white mt-4 mx-4">
+        <div className="flex flex-col col-span-12 rounded-sm shadow-sm bg-white mt-1">
             <span className="flex bg-white rounded-t-md p-2">
                 <p className="text-gray-800">More Products from this seller</p>
             </span>

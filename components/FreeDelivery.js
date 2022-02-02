@@ -26,7 +26,7 @@ const FreeDelivery = ({ image, category, description, price, title, id }) => {
     const router = useRouter()
   return (
         <div className="flex flex-col m-2 group bg-white z-30 p-2 md:h-56 hover:cursor-pointer rounded-md hover:bg-gray-100">
-            <Image onClick={() => router.push(`/product/${id}`)} key={id} src={image} objectFit='contain' height={80} width={80} />
+            <Image onClick={() => router.push(`/product/${id}`)} key={id} src={image} objectFit='contain' height={80} width={80} alt="delivery-image"/>
             <h4 className="my-1 text-sm line-clamp-1">{title}</h4>
             <div className="flex">
                 {Array(rating).fill().map((_, i) => (

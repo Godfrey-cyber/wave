@@ -1,5 +1,6 @@
 import { CurrencyDollarIcon, QuestionMarkCircleIcon, RefreshIcon} from '@heroicons/react/outline'
 import React from 'react'
+import Image from 'next/image'
 
 const SideBarRight = () => {
     return (
@@ -34,7 +35,7 @@ const SideBarRight = () => {
                 </div>
             </div>
             <div className="mt-5 rounded-md h-40 w-auto">
-                <img className="rounded-md h-full" loading="lazy" objectfit="contain" src="https://ke.jumia.is/cms/2022/W02/HP/Sliders/KE_Electronics_SuperSaver_Afcon_0122_S.jpg" alt="helloimage"/>
+                <Image className="rounded-md h-full" width={200} height={240} objectfit="contain" src="https://ke.jumia.is/cms/2022/W02/HP/Sliders/KE_Electronics_SuperSaver_Afcon_0122_S.jpg" alt="helloimage"/>
             </div>
         </div>
     )

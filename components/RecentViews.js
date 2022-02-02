@@ -3,7 +3,7 @@ import Product from './Product';
 
 const RecentReviews = ({products}) => {
     return (
-        <div className="flex flex-col col-span-12 rounded-sm shadow-sm bg-white mt-4 mx-4">
+        <div className="flex flex-col col-span-12 rounded-sm shadow-sm bg-white mt-4">
             <span className="flex bg-white rounded-t-md p-2">
                 <p className="text-gray-800">Recently viewed</p>
             </span>

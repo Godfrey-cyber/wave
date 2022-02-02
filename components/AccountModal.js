@@ -65,20 +65,21 @@ const AccountModal = () => {
                 <TicketIcon className="h-5 text-gray-700 pointer-events-none"/>
                 <p className="account_util1 pointer-events-none">Wave Credit</p>
             </span>
-            <GoogleLogin
+            {!user ? (<GoogleLogin
                 clientId="943228039096-85874clgtl50rgj4bn4ook2tom7b4ni1.apps.googleusercontent.com"
                     render={renderProps => (
                         <span className="flex items-center border-t hover:bg-gray-100 hover:cursor-pointer border-gray-200 justify-center py-1 px-5"
                             onClick={renderProps.onClick}
                             disabled={renderProps.disabled}>
-                            
-                            {!user ? (<p onClick={logout} className="text-orange-400 text-sm py-1">LOGOUT</p>) : (<p className="text-orange-400 text-sm py-1">SIGNIN</p>)}
-                        </span> 
+                            <p className="text-orange-400 text-sm py-1 hover:cursor-pointer">SIGNIN</p>
+                        </span>
                     )}
                 onSuccess={googleSuccess}
                 onFailure={googleFailure}
-                cookiePolicy={"single_host_origin"}     
-            /> 
+              cookiePolicy={"single_host_origin"} />) : (
+            <span className="flex items-center border-t hover:bg-gray-100 hover:cursor-pointer border-gray-200 justify-center py-1 px-5">
+                <p onClick={logout} className="text-orange-400 text-sm py-1 hover:cursor-pointer">LOGOUT</p>
+            </span>)}
         </div>
     )
 };

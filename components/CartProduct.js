@@ -22,7 +22,7 @@ const CartProduct = ({ id, title, price, image }) => {
         <main className="flex flex-col mt-4 mx-auto w-full">
           <div className="flex bg-white shadow-sm rounded-sm p-4  items-center justify-between border-gray-200">
                 <div className="flex items-center justify-between space-x-3">
-                  <Image src={image} objectfit="contain" width={80} height={100} />
+                  <Image src={image} objectfit="contain" width={80} height={100} alt="cart-product"/>
                     <div className="flex flex-col">
                         <p className="text-gray-400 text-xs">Seller: {""} Newton Digital</p>
                         <h3 onClick={() => router.push(`/product/${id}`)} className="text-gray-900 text-md hover:text-orange-400 line-clamp-1 hover:cursor-pointer">{title.split("").splice(0, 30).join("")}...</h3>

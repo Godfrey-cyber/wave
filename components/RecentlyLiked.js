@@ -3,12 +3,12 @@ import Product from './Product';
 
 const AlsoLike = ({products}) => {
     return (
-        <div className="flex flex-col rounded-sm shadow-sm bg-white mt-4 mx-5">
+        <div className="flex flex-col rounded-sm shadow-sm bg-white mt-4">
             <span className="flex bg-white rounded-t-md p-2">
                 <p className="text-gray-800">Customers who viewed this product also viewed</p>
             </span>
             <div className="product-feed">
-                {products.slice(4, 8).map(({ image, category, description, price, title, id }) => (
+                {products.slice(4, 10).map(({ image, category, description, price, title, id }) => (
                     <Product 
                         id={id}
                         key={id}

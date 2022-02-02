@@ -33,23 +33,23 @@ const OfficialStore = ({ products }) => {
             {!close && <AccountModal />}
             {!modal && <HelpModal />}
             <main className="grid grid-cols-12 w-full mx-auto my-10 lg:px-16">
-                <div className="max-w-5xl mt-10 col-span-12 mx-auto">
-                    <div className="h-80">
-                        <img className="rounded-sm w-full h-full" objectfit="contain" src="https://ke.jumia.is/cms/2022/W02/HP/Sliders/KE_Electronics_SuperSaver_Afcon_0122_S.jpg" alt="helloimage"/>
+                <div className="max-w-5xl mt-6 col-span-12 mx-auto">
+                    <div className="">
+                        <Image className="rounded-sm w-full h-full" objectfit="contain" height={300} width={1100} src="https://ke.jumia.is/cms/2022/W02/HP/Sliders/KE_Electronics_SuperSaver_Afcon_0122_S.jpg" alt="helloimage"/>
                     </div>
                     <Phones className="" products={products} />
                     <div className="flex mx-auto rounded-md my-4">
                         <div className="flex bg-white p-2 rounded space-x-2">
                             <div className="rounded-md">
-                                <img className="rounded hover:scale-105 translation-all duration-100" src="https://ke.jumia.is/cms/2022/W02/HP/Sliders/KE_Electronics_SuperSaver_Afcon_0122_S.jpg" alt="myimage" />
+                                <Image className="rounded hover:scale-105 translation-all duration-100" height={350} width={700} src="https://ke.jumia.is/cms/2022/W02/HP/Sliders/KE_Electronics_SuperSaver_Afcon_0122_S.jpg" alt="myimage" />
                             </div>
                             <div className="rounded-md">
-                                <img className="rounded hover:scale-105 translation-all duration-100" src="https://ke.jumia.is/cms/2022/W02/HP/Sliders/KE_Electronics_SuperSaver_Afcon_0122_S.jpg" alt="myimage" />
+                                <Image className="rounded hover:scale-105 translation-all duration-100" height={350} width={700} src="https://ke.jumia.is/cms/2022/W02/HP/Sliders/KE_Electronics_SuperSaver_Afcon_0122_S.jpg" alt="myimage" />
                             </div>
                         </div>
                    </div>
                    <Electronics products={products} />
-                   <main className="grid lg:grid-cols-12 space-x-1 mx-auto my-4 w-full">
+                   <main className="grid lg:grid-cols-12 space-x-1  my-4 w-full">
                     {/* category */}
                     <Categories />
                     {/* returns & deliveries */}

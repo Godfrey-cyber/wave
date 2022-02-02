@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import Header from "../../components/Header"
 import SmallHeader from "../../components/SmallHeader"
 import MainHeader from "../../components/MainHeader"
-// import Currency from "react-currency-formatter"
 import Image from "next/image"
 import { TruckIcon, RefreshIcon, QuestionMarkCircleIcon, ChevronRightIcon, ExclamationCircleIcon, StarIcon, DocumentTextIcon, ViewListIcon, AnnotationIcon, ShoppingCartIcon, ChatIcon, HeartIcon, SparklesIcon, ShieldCheckIcon, BadgeCheckIcon, ChatAlt2Icon } from '@heroicons/react/outline'
 import RecentlyLiked from '../../components/RecentlyLiked'
@@ -55,12 +54,12 @@ const dispatch = useDispatch()
             <MainHeader setClose={setClose} modal={modal} setModal={setModal} close={close}/>
             {!close && <AccountModal />}
             {!modal && <HelpModal />}
-                <main className="grid grid-cols-12 lg:space-x-1 lg:mx-auto my-10 lg:px-16 w-full">
+                <main className="grid grid-cols-12 lg:space-x-3 lg:mx-auto my-10 lg:px-16 w-full">
                     {/* Product segment */}
                 <div className="flex flex-col mb-0 md:mb-4 col-span-12 lg:col-span-9">
-                    <div className="grid grid-cols-12 items-start rounded-sm lg:mx-5 shadow-sm bg-white p-2 lg:p-4 space-x-5">
+                    <div className="grid grid-cols-12 items-start rounded-sm shadow-sm bg-white p-2 lg:p-4 lg:space-x-3">
                         <div className="grid gap-y-14 flex-col content-between col-span-12 lg:col-span-4 ">
-                            <img src={image} objectfit="contain" loading="lazy" className="hover:cursor-grabbing h-36 w-auto" />
+                            <Image src={image} objectfit="contain" loading="lazy" className="hover:cursor-grabbing  " height={144} width={150} alt="product"/>
                             <div className="text-sm border-t p-2 border-gray-200">
                                 <p className="text-sm text-gray-500">SHARE THIS PRODUCT</p>
                                 <span className="span flex space-x-3">
@@ -124,7 +123,7 @@ const dispatch = useDispatch()
                         </div>
                     </div>
                     {/* product details */}
-                    <div className="flex flex-col rounded-sm shadow-sm bg-white mt-4 lg:mx-5">
+                    <div className="flex flex-col rounded-sm shadow-sm bg-white mt-4">
                         <span className="flex items-center justify-between border-b border-gray-300">
                             <h2 className="text-sm text-gray-700 font-normal p-2">PRODUCT DETAILS</h2>
                             <ChevronRightIcon className="h-6 text-gray-700"/>
@@ -136,7 +135,7 @@ const dispatch = useDispatch()
                     </div>
                 
                     {/* specifications */}
-                    <div className="flex flex-col rounded-sm shadow-sm bg-white mt-4 lg:mx-5">
+                    <div className="flex flex-col rounded-sm shadow-sm bg-white mt-4">
                         <span className="flex items-center justify-between border-b border-gray-200">
                             <h2 className="text-sm text-gray-700 font-normal p-2">SPECIFICATIONS</h2>
                         </span>
@@ -200,7 +199,7 @@ const dispatch = useDispatch()
                     <RecentlyLiked products={products} />
                     {/* you may also like */}
                     <AlsoLike products={products}/>
-                    <div className="flex flex-col rounded-sm shadow-sm bg-white mt-4 mb-4 lg:mb-1  lg:mx-5">
+                    <div className="flex flex-col rounded-sm shadow-sm bg-white mt-4 mb-4 lg:mb-1">
                         <span className="flex items-center justify-between border-b border-gray-200">
                             <h2 className="text-sm text-gray-900 p-2">Customer Feedback</h2>
                         </span>
@@ -213,7 +212,7 @@ const dispatch = useDispatch()
                 {/* </div> */}
                 {/* return & deliverlies div */}
                 <div className="flex flex-col col-span-12 lg:col-span-3">
-                    <div className="flex flex-col rounded-sm shadow-sm lg:mx-5 bg-white">
+                    <div className="flex flex-col rounded-sm shadow-sm bg-white">
                         <span className="divide-y divide-slate-200">
                             <h2 className="text-sm text-gray-600 font-normal p-2">DELIVERY & RETURNS</h2>
                             <h2 className="text-md text-gray-600 font-normal p-2">Choose your location</h2> 
@@ -257,7 +256,7 @@ const dispatch = useDispatch()
                         </div>
                     </div>
                     {/* seller information */}
-                    <div className="flex flex-col mt-4 rounded-sm shadow-sm lg:mx-5 bg-white">
+                    <div className="flex flex-col mt-4 rounded-sm shadow-sm bg-white">
                         <span className="flex items-center justify-between border-b border-gray-300">
                             <h2 className="text-sm text-gray-700 font-normal p-2">SELLER INFORMATION</h2>
                             <ChevronRightIcon className="h-6 text-gray-700"/>
@@ -292,7 +291,7 @@ const dispatch = useDispatch()
                         </div>
                     </div>
                     {/* product details */}
-                    <div className="flex justify-start flex-col mt-4 rounded-sm lg:mx-5 shadow-sm bg-white">
+                    <div className="flex justify-start flex-col mt-4 rounded-sm shadow-sm bg-white">
                         <span className="flex space-x-4 p-1 items-center hover:bg-gray-100 text-sm text-gray-800">
                             <DocumentTextIcon className="h-6 text-gray-600"/>
                             <p className="text-xs text-gray-600 p-2">Product Details</p>
@@ -307,9 +306,9 @@ const dispatch = useDispatch()
                         </span>
                     </div>
                     {/* product */}
-                    <div className="flex flex-col align-items-center justify-between lg:mx-5 mt-4 p-2 rounded-sm shadow-sm bg-white">
+                    <div className="flex flex-col align-items-center justify-between mt-4 p-2 rounded-sm shadow-sm bg-white">
                         <div className="mb-1 flex space-y-3">
-                            <Image src={image} height={80} width={100} objectfit="contain"/>
+                            <Image src={image} height={100} width={100} objectfit="contain" alt="small-image"/>
                             <span className="flex flex-col p-2">
                                 <p className="text-sm text-gray-600 line-clamp-1">{title}</p>
                                 <div className="mb-1">
@@ -327,7 +326,7 @@ const dispatch = useDispatch()
                         </button>  
                     </div>
                     {/* chat */}
-                    <div className="flex flex-col align-items-center justify-between mt-4 p-2 lg:mx-5 rounded-sm shadow-sm bg-white">
+                    <div className="flex flex-col align-items-center justify-between mt-4 p-2 rounded-sm shadow-sm bg-white">
                         <div className="mb-1 flex flex-col items-center justify-center space-y-3 p-2">
                             <p className="text-sm text-gray-600 line-clamp-1">Questions about this product?</p>
                             <span className="flex space-x-3 items-center text-sm hover:bg-pink-100 hover:rounded-sm hover:cursor-pointer p-1">
