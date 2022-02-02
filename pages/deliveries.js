@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head'
+import Image from "next/image"
 import Header from '../components/Header'
 import MainHeader from '../components/MainHeader'
 import SmallHeader from '../components/SmallHeader'
@@ -24,14 +25,14 @@ const Deliveries = ({products}) => {
             <Header />
             <SmallHeader />
             <MainHeader setClose={setClose} modal={modal} setModal={setModal} close={close}/>
-      {!close && <AccountModal />}
-      {!modal && <HelpModal />}
+            {!close && <AccountModal />}
+            {!modal && <HelpModal />}
             <main className="max-w-5xl mx-auto ">
                 <div className="flex flex-col space-y-4 my-10">
-                    <div className="flex bg-white items-center h-80 justify-between rounded-md mx-4">
-                        <img className="rounded w-full h-full hover:scale-102 translation-all duration-100" src="https://ke.jumia.is/cms/2022/W02/HP/Sliders/KE_Electronics_SuperSaver_Afcon_0122_S.jpg" alt="myimage" />
+                    <div className="flex bg-white items-center justify-between rounded-md">
+                        <Image className="rounded w-full h-full hover:scale-102 translation-all duration-100" height={300} width={1100} src="https://ke.jumia.is/cms/2022/W02/HP/Sliders/KE_Electronics_SuperSaver_Afcon_0122_S.jpg" alt="myimage" />
                     </div>
-                    <div className="grid grid-flow-row-dense gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 bg-white rounded-md py-5 mx-4">
+                    <div className="grid grid-flow-row-dense gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 bg-white rounded-sm py-5">
                         {products.slice(0, 12).map(({ image, category, description, price, title, id }) => (
                             <Displays 
                                 id={id}
