@@ -18,12 +18,14 @@ import { useDispatch } from 'react-redux'
 import { addToWishlist } from '../../slices/wishlistSlice'
 import { addToBasket } from '../../slices/basketSlice'
 
+
 const MAX_RATING = 5
 const MIN_RATING = 1
 
 const ProductPage = ({products, single}) => {
     const [close, setClose] = useState(true)
   const [modal, setModal] = useState(true)
+  
     // const router = useRouter()
 const dispatch = useDispatch()
     const [rating] = useState(
@@ -47,10 +49,12 @@ const dispatch = useDispatch()
         }
         dispatch(addToWishlist(product))
     }
+    
     return (
         <div className="bg-gray-100 w-screen h-screen overflow-x-hidden">
             <Header />
             <SmallHeader />
+            
             <MainHeader setClose={setClose} modal={modal} setModal={setModal} close={close}/>
             {!close && <AccountModal />}
             {!modal && <HelpModal />}

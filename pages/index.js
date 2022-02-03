@@ -19,10 +19,12 @@ import Adverts from '../components/Adverts'
 import {useState} from 'react'
 import AccountModal from '../components/AccountModal'
 import HelpModal from '../components/HelpModal'
+import SideBar from '../components/SideBar'
 
 const Home = ({products}) => {
   const [close, setClose] = useState(true)
   const [modal, setModal] = useState(true)
+  const [barOpen, setBarOpen] = useState(true)
   return (
       <div className="bg-orange-300 relative">
        <Head>
@@ -32,9 +34,10 @@ const Home = ({products}) => {
       </Head>
       <Header />
       <SmallHeader />
-      <MainHeader setClose={setClose} modal={modal} setModal={setModal} close={close}/>
-      {!close && <AccountModal />}
+      <MainHeader setClose={setClose} modal={modal} setModal={setModal} close={close} barOpen={barOpen}  setBarOpen={setBarOpen}/>
+      {!close && <AccountModal setClose={setClose} close={close}/>}
       {!modal && <HelpModal />}
+      {!barOpen && <SideBar />}
       <main className="grid grid-cols-12 w-full lg:px-20 space-x-3 lg:py-2 max-w-screen-2xl mx-auto">
         <SideBarLeft/>
          <Banner />

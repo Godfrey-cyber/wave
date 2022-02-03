@@ -6,10 +6,11 @@ import {signIn } from "../slices/authSlice"
 import {logOut } from "../slices/authSlice"
 import { useDispatch } from "react-redux"
 
-const AccountModal = () => {
+const AccountModal = ({setClose, close}) => {
    const dispatch = useDispatch()
     const router = useRouter()
     const [user, setUser] = useState(null);
+    // const [close, setClose] = useState(true)
     
     useEffect(() => {
         const token = user?.token
@@ -43,8 +44,12 @@ const AccountModal = () => {
         dispatch(logOut())
         setUser(null)
     }
-  return (
-        <div className="flex flex-col bg-white shadow-gray-300 shadow-md rounded-sm absolute top-18 right-12 lg:right-48 z-50">
+    const handleClose = () => {
+        setClose(prevState => !prevState)
+    }
+    return (
+      <div onClick={handleClose} className="flex flex-col relative top-0 left-0 bottom-0 bg-orange-900">
+        <div className="flex flex-col bg-white shadow-gray-300 fixed shadow-md rounded-sm top-18 right-12 lg:right-48 z-50">
             <span onClick={() => router.push("/orders")} className="account_util">
                 <UserIcon className="h-5 text-gray-700 pointer-events-none"/>
                 <p className="account_util1 pointer-events-none">My Account</p>
@@ -81,6 +86,7 @@ const AccountModal = () => {
                 <p onClick={logout} className="text-orange-400 text-sm py-1 hover:cursor-pointer">LOGOUT</p>
             </span>)}
         </div>
+    </div>
     )
 };
 

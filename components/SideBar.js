@@ -4,8 +4,9 @@ import { CalendarIcon, ChevronDownIcon, ClockIcon, ShoppingBagIcon, UserGroupIco
 import { DesktopComputerIcon, DeviceMobileIcon, HomeIcon } from '@heroicons/react/outline'
 
 const SideBarLeft = () => {
+    
     return (
-        <div className="hidden lg:inline-flex col-span-2">
+        <div className="col-span-2 absolute lg:top-16 lg:left-20 top-0 left-0 h-full z-50">
             <div className="p-2 mt-5 max-w-[200px] xl:min-w-[200px] bg-gray-100 rounded-md">
                 <SideBarRow Icon={UsersIcon} title="Supermarket"/>
                 <SideBarRow Icon={UserGroupIcon} title="Health & Beauty"/>
