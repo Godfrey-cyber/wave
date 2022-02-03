@@ -57,9 +57,9 @@ const dispatch = useDispatch()
                 <main className="grid grid-cols-12 lg:space-x-3 lg:mx-auto my-10 lg:px-16 w-full">
                     {/* Product segment */}
                 <div className="flex flex-col mb-0 md:mb-4 col-span-12 lg:col-span-9">
-                    <div className="grid grid-cols-12 items-start rounded-sm shadow-sm bg-white p-2 lg:p-4 lg:space-x-3">
+                    <div className="grid grid-cols-12 items-start rounded-sm drop-shadow-sm bg-white p-2 lg:p-4 lg:space-x-3">
                         <div className="grid gap-y-14 flex-col content-between col-span-12 lg:col-span-4 ">
-                            <Image src={image} objectfit="contain" loading="lazy" className="hover:cursor-grabbing  " height={144} width={150} alt="product"/>
+                            <Image src={image} objectfit="contain" loading="lazy" className="hover:cursor-grabbing" height={180} width={200} alt="product"/>
                             <div className="text-sm border-t p-2 border-gray-200">
                                 <p className="text-sm text-gray-500">SHARE THIS PRODUCT</p>
                                 <span className="span flex space-x-3">
@@ -123,7 +123,7 @@ const dispatch = useDispatch()
                         </div>
                     </div>
                     {/* product details */}
-                    <div className="flex flex-col rounded-sm shadow-sm bg-white mt-4">
+                    <div className="flex flex-col rounded-sm drop-shadow-sm bg-white mt-4">
                         <span className="flex items-center justify-between border-b border-gray-300">
                             <h2 className="text-sm text-gray-700 font-normal p-2">PRODUCT DETAILS</h2>
                             <ChevronRightIcon className="h-6 text-gray-700"/>
