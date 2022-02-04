@@ -63,7 +63,9 @@ const dispatch = useDispatch()
                 <div className="flex flex-col mb-0 md:mb-4 col-span-12 lg:col-span-9">
                     <div className="grid grid-cols-12 items-start rounded-sm drop-shadow-sm bg-white p-2 lg:p-4 lg:space-x-3">
                         <div className="grid gap-y-14 flex-col content-between col-span-12 lg:col-span-4 ">
-                            <Image src={image} objectfit="contain" loading="lazy" className="hover:cursor-grabbing" height={180} width={200} alt="product"/>
+                            <div className="flex h-36 w-36 relative mx-auto">
+                                <Image src={image}  layout="fill" objectPosition="center" objectfit="contain" className="hover:cursor-grabbing flex justify-self-center" alt="product"/>
+                            </div>
                             <div className="text-sm border-t p-2 border-gray-200">
                                 <p className="text-sm text-gray-500">SHARE THIS PRODUCT</p>
                                 <span className="span flex space-x-3">
